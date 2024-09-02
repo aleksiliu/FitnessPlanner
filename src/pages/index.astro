@@ -1,13 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import VideoBackground from '../components/VideoBackground.astro';
+import ContentOverlay from '../components/ContentOverlay.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to Astro.</h1>
-	</main>
+  <div class="min-h-screen flex items-center justify-center bg-black">
+    <VideoBackground />
+    <ContentOverlay />
+  </div>
 </Layout>
-
-<style>
-
-</style>
