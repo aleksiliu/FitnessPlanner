@@ -40,6 +40,7 @@ const useFetchFitnessPlan = () => {
       }
 
       const data: ApiResponse = await response.json();
+
       const planText = data.candidates[0].content.parts[0].text;
       setPlan(planText);
     } catch (error) {
