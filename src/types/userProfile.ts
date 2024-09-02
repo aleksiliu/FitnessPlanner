@@ -1,7 +1,7 @@
 export interface UserProfile {
-    age: number;       
-    weight: number;   
-    height: number;   
+    age: number | string;
+    weight: number | string;
+    height: number | string;
     fitnessGoal: string;
-    timesPerWeek: number;
+    timesPerWeek: number | string;
 }

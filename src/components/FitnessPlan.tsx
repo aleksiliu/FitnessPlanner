@@ -7,11 +7,11 @@ import LoadingSpinner from './LoadingSpinner';
 const FitnessPlan: React.FC = () => {
   const { plan, loading, error, fetchFitnessPlan } = useFetchFitnessPlan();
   const [formData, setFormData] = useState<UserProfile>({
-    age: 0,
-    weight: 0,
-    height: 0,
+    age: '',
+    weight: '',
+    height: '',
     fitnessGoal: '',
-    timesPerWeek: 0,
+    timesPerWeek: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
