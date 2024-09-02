@@ -29,6 +29,14 @@ const FitnessPlan: React.FC = () => {
   const renderPlan = (planText: string) => {
     const lines = planText.split('\n').filter(line => line.trim() !== '');
     return lines.map((line, index) => {
+      // Remove asterisks
+      line = line.replace(/\*\*/g, '');
+
+      // Add spacing for weeks
+      if (line.toLowerCase().includes('week')) {
+        line = line.replace(/week/gi, 'week ');
+      }
+
       if (line.startsWith('##')) {
         return <h2 key={index} className="text-xl font-bold mt-4">{line.replace('##', '').trim()}</h2>;
       } else if (line.startsWith('*')) {
@@ -40,7 +48,7 @@ const FitnessPlan: React.FC = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto text-gray-100">
+    <div className="p-4 mx-auto text-gray-100">
       {!plan ? (
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -115,7 +123,7 @@ const FitnessPlan: React.FC = () => {
                 Loading...
               </div>
             ) : (
-              'Get Fitness Plan'
+              'Get Fitness Your Plan'
             )}
           </button>
         </form>
