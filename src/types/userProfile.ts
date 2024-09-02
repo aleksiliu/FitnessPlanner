@@ -3,4 +3,5 @@ export interface UserProfile {
     weight: number;   
     height: number;   
     fitnessGoal: string;
+    timesPerWeek: number;
 }
