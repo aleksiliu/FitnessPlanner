@@ -1,6 +1,6 @@
 # Fitness Planner
 
-Fitness Planner is a personalized workout generator built with Astro, React, and TypeScript. It uses AI to create custom fitness plans based on user input.
+Fitness Planner is a personalized workout generator built with Astro, React, and TypeScript. It uses AI (Google Gemini) to create custom fitness plans based on user input.
 
 ## Features
 
