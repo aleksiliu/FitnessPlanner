@@ -1,18 +1,27 @@
 ---
-import { SignedOut, SignInButton } from '@clerk/astro/components';
+import { SignedOut, SignInButton, SignUpButton } from '@clerk/astro/components';
 ---
 
-<main class="relative z-10 text-white p-8 max-w-2xl text-center">
-  <h1 class="text-6xl font-bold mt-4">Take Your Fitness To The Next Level</h1>
+<main class="relative z-10 text-white p-8 max-w-2xl text-left md:text-center">
+  <h1 class="text-4xl md:text-6xl font-bold mt-4">
+    Take Your Fitness To The Next Level
+  </h1>
   <p class="mt-4">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
   </p>
-  <div class="mt-6 flex justify-center space-x-4">
+  <div class="mt-6 flex justify-left md:justify-center space-x-4">
     <SignedOut>
+      <SignUpButton
+        mode="modal"
+        mode="redirect"
+        as="button"
+        class="bg-white text-black px-6 py-2 rounded-full"
+        fallbackRedirectUrl="/program"
+      />
       <SignInButton
         mode="modal"
         as="button"
-        class="bg-white text-black px-6 py-2 rounded-full"
+        class="text-white border border-neutral-500 px-6 py-2 rounded-full"
         fallbackRedirectUrl="/program"
       />
     </SignedOut>

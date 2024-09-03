@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import useFetchFitnessPlan from '../hooks/useFetchFitnessPlan';
 import type { UserProfile } from '../types/userProfile';
 import FitnessForm from './FitnessForm';
-import LoadingSpinner from './LoadingSpinner';
 
 const FitnessPlan: React.FC = () => {
   const { plan, loading, error, fetchFitnessPlan } = useFetchFitnessPlan();
@@ -11,7 +10,7 @@ const FitnessPlan: React.FC = () => {
     weight: '',
     height: '',
     fitnessGoal: '',
-    timesPerWeek: '',
+    timesPerWeek: '3',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

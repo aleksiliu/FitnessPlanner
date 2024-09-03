@@ -2,11 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import VideoBackground from '../components/VideoBackground.astro';
 import ContentOverlay from '../components/ContentOverlay.astro';
+import FitnessLogo from '../components/FitnessLogo.astro';
 ---
 
 <Layout title="Welcome to Fitness Planner">
-  <div class="min-h-screen flex items-center justify-center bg-black">
+  <div
+    class="min-h-screen flex flex-col justify-end sm:justify-center items-center bg-black relative"
+  >
     <VideoBackground />
+    <FitnessLogo />
     <ContentOverlay />
   </div>
 </Layout>
