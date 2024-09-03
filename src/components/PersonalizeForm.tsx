@@ -23,17 +23,17 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
   const renderSelector = () => {
     if (selectedField === 'age') {
       return (
-        <div className="bg-gray-800 rounded-lg p-4">
-          <h2 className="text-white text-lg mb-4">Age</h2>
+        <div className="bg-white rounded-lg p-4 mt-6">
+          <h2 className="text-black text-lg mb-4 text-center">Age</h2>
           <div className="flex items-center justify-center">
             <button 
-              className="text-white text-3xl px-4"
+              className="text-white text-3xl px-4 rounded-full bg-black text-center"
               onClick={() => handleChange('age', Math.max(1, Number(formData.age) - 1))}
             >
               -
             </button>
             <div className="relative">
-              <span className="text-white text-5xl mx-4" onClick={() => handleFocus(ageInputRef)}>{formData.age}</span>
+              <span className="text-black text-5xl mx-4" onClick={() => handleFocus(ageInputRef)}>{formData.age}</span>
               <input
                 ref={ageInputRef}
                 type="number"
@@ -48,7 +48,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
               />
             </div>
             <button 
-              className="text-white text-3xl px-4"
+              className="text-white text-3xl px-4 rounded-full bg-black text-center"
               onClick={() => handleChange('age', Number(formData.age) + 1)}
             >
               +
@@ -169,7 +169,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
 
   return (
     <>
-    <div className="bg-black text-white p-4 mb-6">
+    <div className="text-white p-4 mb-6">
       <div className="space-y-4">
         <button 
           className="w-full flex justify-between items-center py-2 border-b border-gray-700"
@@ -213,13 +213,13 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
       {selectedField && (
         <>
                  <button 
-                 className="bg-white text-black w-full py-2 rounded-lg mt-4"
+                 className="bg-white text-black w-full py-2 rounded-full mt-4"
                  onClick={() => setSelectedField(null)}
                >
                  Confirm
                </button>
         <button 
-          className="bg-gray-800 text-white w-full py-2 rounded-lg mt-4"
+          className="bg-gray-800 text-white w-full py-2 rounded-full mt-4"
           onClick={() => setSelectedField(null)}
         >
           Cancel
@@ -229,7 +229,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
     </div>
         <button
         type="submit"
-        className="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-colors"
+        className="bg-white text-black px-6 py-4 rounded-full hover:bg-gray-200 transition-colors"
         disabled={loading}
         onClick={handleSubmit}
       >
