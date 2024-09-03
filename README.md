@@ -22,7 +22,7 @@ Fitness Planner is a personalized workout generator built with Astro, React, and
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/fitness-planner.git
+   git clone https://github.com/aleksiliu/FitnessPlanner.git
    cd fitness-planner
    ```
 
