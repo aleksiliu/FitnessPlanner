@@ -18,7 +18,7 @@ const useFetchFitnessPlan = () => {
     setLoading(true);
     setError(null);
 
-    const prompt = `Create a personalized fitness and diet plan for a ${formData.age}-year-old with the goal of ${formData.fitnessGoal}. They weigh ${formData.weight}kg and are ${formData.height}cm tall. They plan to work out ${formData.timesPerWeek} times per week. Give only the training plan, no need for diet plan`;
+    const prompt = `Create a personalized fitness plan for a ${formData.age}-year-old with the goal of ${formData.fitnessGoal}. They weigh ${formData.weight}kg and are ${formData.height}cm tall. They plan to work out ${formData.timesPerWeek} times per week. Provide only the training plan.`;
 
     const apiKey = import.meta.env.PUBLIC_GOOGLEAPI_KEY;
 

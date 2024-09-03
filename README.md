@@ -4,7 +4,7 @@ Fitness Planner is a personalized workout generator built with Astro, React, and
 
 ## Features
 
-- Personalized fitness plan generation
+- Personalized fitness plan generation with AI
 - User authentication with Clerk
 - Responsive design with Tailwind CSS
 - TypeScript for type safety
