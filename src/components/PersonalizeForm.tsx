@@ -219,7 +219,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
                  Confirm
                </button>
         <button 
-          className="bg-gray-800 text-white w-full py-2 rounded-full mt-4"
+          className="text-white border border-neutral-500 w-full py-2 rounded-full mt-4"
           onClick={() => setSelectedField(null)}
         >
           Cancel
