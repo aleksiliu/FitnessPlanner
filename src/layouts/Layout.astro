@@ -1,5 +1,6 @@
 ---
 import FitnessLogo from '../components/FitnessLogo.astro';
+import Header from '../components/Header.astro';
 
 interface Props {
   title: string;
@@ -19,7 +20,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <FitnessLogo />
+    <Header />
     <slot />
   </body>
 </html>

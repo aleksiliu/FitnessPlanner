@@ -1,5 +1,10 @@
 ---
-import { SignedOut, SignInButton, SignUpButton } from '@clerk/astro/components';
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+} from '@clerk/astro/components';
 ---
 
 <main class="relative z-10 text-white p-8 max-w-2xl text-left md:text-center">
@@ -12,6 +17,15 @@ import { SignedOut, SignInButton, SignUpButton } from '@clerk/astro/components';
     aspirations with our personalized, science-backed plans.
   </p>
   <div class="mt-6 flex justify-left md:justify-center space-x-4">
+    <SignedIn>
+      <a
+        href="/program"
+        class="bg-white text-black px-6 py-2 rounded-full inline-block"
+      >
+        Get Started
+      </a>
+    </SignedIn>
+
     <SignedOut>
       <SignUpButton
         mode="modal"
