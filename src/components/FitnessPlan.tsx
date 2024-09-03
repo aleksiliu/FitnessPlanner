@@ -10,8 +10,8 @@ const FitnessPlan: React.FC = () => {
   const { displayedText, isTyping } = useTypingAnimation(plan || '');
   const [formData, setFormData] = useState<UserProfile>({
     age: 30,
-    weight: 70,
-    height: 170,
+    weight: 80,
+    height: 175,
     fitnessGoal: 'Select your goal',
     timesPerWeek: 3,
   });
