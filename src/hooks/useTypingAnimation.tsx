@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 
-export function useTypingAnimation(text: string, typingSpeed: number = 10) {
+export function useTypingAnimation(text: string, typingSpeed: number = 5) {
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const typingRef = useRef<NodeJS.Timeout | null>(null);
+  const typingRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (text && !isTyping) {

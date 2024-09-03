@@ -3,6 +3,7 @@ import useFetchFitnessPlan from '../hooks/useFetchFitnessPlan';
 import type { UserProfile } from '../types/userProfile';
 import FitnessForm from './FitnessForm';
 import { useTypingAnimation } from '../hooks/useTypingAnimation';
+import PlanRenderer from './PlanRenderer';
 
 const FitnessPlan: React.FC = () => {
   const { plan, loading, error, fetchFitnessPlan } = useFetchFitnessPlan();
@@ -56,7 +57,7 @@ const FitnessPlan: React.FC = () => {
         />
       ) : (
         <div className="mt-4 rounded text-gray-100">
-          {renderPlan(displayedText)}
+          <PlanRenderer planText={displayedText} />
           {isTyping && <span className="inline-block w-2 h-4 ml-1 bg-gray-100 animate-blink"></span>}
         </div>
       )}
