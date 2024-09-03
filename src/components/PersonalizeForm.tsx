@@ -227,15 +227,17 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
         </>
       )}
     </div>
-        <button
-        type="submit"
-        className="bg-white text-black px-6 py-4 rounded-full hover:bg-gray-200 transition-colors"
-        disabled={loading}
-        onClick={handleSubmit}
-      >
-        {loading ? <LoadingSpinner /> : 'Get Your Fitness Plan'}
-      </button>
-     </>
+        {!selectedField && (
+          <button
+            type="submit"
+            className="bg-white text-black px-6 py-4 rounded-full hover:bg-gray-200 transition-colors"
+            disabled={loading}
+            onClick={handleSubmit}
+          >
+            {loading ? <LoadingSpinner /> : 'Get Your Fitness Plan'}
+          </button>
+        )}
+        </>
   );
 };
 
