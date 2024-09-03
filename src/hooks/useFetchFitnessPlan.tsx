@@ -44,7 +44,7 @@ const useFetchFitnessPlan = () => {
       const planText = data.candidates[0].content.parts[0].text;
       setPlan(planText);
     } catch (error) {
-      setError('Failed to fetch fitness plan. Please try again later.');
+      setError('Failed to load fitness plan. Please try again.');
     } finally {
       setLoading(false);
     }
