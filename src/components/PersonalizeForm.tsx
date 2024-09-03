@@ -89,7 +89,18 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
               onClick={() => setSelectedField(field)}
             >
               <span className="capitalize">{field.replace(/([A-Z])/g, ' $1').trim()}</span>
-              <span>{formData[field as keyof UserProfile]} {field === 'weight' ? 'kg' : field === 'height' ? 'cm' : ''}</span>
+              <span className="flex items-center">
+                {formData[field as keyof UserProfile]} {field === 'weight' ? 'kg' : field === 'height' ? 'cm' : ''}
+                {selectedField === field ? (
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                ) : (
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                )}
+              </span>
             </button>
           ))}
         </div>

@@ -35,7 +35,7 @@ const NumberSelector: React.FC<NumberSelectorProps> = ({ label, value, onChange,
             className="text-white text-5xl focus:outline-none"
             onClick={() => setIsOpen(true)}
           >
-            {value}
+            {value} 
           </button>
           <button onClick={handleIncrement} className="text-white text-3xl focus:outline-none">+</button>
         </div>
