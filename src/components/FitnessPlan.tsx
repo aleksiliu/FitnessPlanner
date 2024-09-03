@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useFetchFitnessPlan from '../hooks/useFetchFitnessPlan';
 import type { UserProfile } from '../types/userProfile';
 import FitnessForm from './FitnessForm';
+import { useTypingAnimation } from '../hooks/useTypingAnimation';
 
 const FitnessPlan: React.FC = () => {
   const { plan, loading, error, fetchFitnessPlan } = useFetchFitnessPlan();
+  const { displayedText, isTyping } = useTypingAnimation(plan || '');
   const [formData, setFormData] = useState<UserProfile>({
     age: '',
     weight: '',
@@ -44,7 +46,7 @@ const FitnessPlan: React.FC = () => {
   };
 
   return (
-    <div className="p-4 mx-auto text-gray-100">
+    <div className="mx-auto text-gray-100">
       {!plan ? (
         <FitnessForm
           formData={formData}
@@ -53,8 +55,9 @@ const FitnessPlan: React.FC = () => {
           loading={loading}
         />
       ) : (
-        <div className="mt-4 p-4 rounded bg-slate-800 text-gray-100">
-          {renderPlan(plan)}
+        <div className="mt-4 rounded text-gray-100">
+          {renderPlan(displayedText)}
+          {isTyping && <span className="inline-block w-2 h-4 ml-1 bg-gray-100 animate-blink"></span>}
         </div>
       )}
       {error && <div className="mt-4 text-red-500">{error}</div>}
