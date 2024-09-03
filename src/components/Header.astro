@@ -1,11 +1,6 @@
 ---
 import FitnessLogo from './FitnessLogo.astro';
-import {
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/astro/components';
+import { SignedIn, UserButton } from '@clerk/astro/components';
 ---
 
 <header
@@ -16,14 +11,5 @@ import {
     <SignedIn>
       <UserButton afterSignOutUrl="/" />
     </SignedIn>
-    <SignedOut>
-      <SignUpButton
-        mode="modal"
-        mode="redirect"
-        as="button"
-        class="bg-white text-black px-6 py-2 rounded-full"
-        fallbackRedirectUrl="/program"
-      />
-    </SignedOut>
   </div>
 </header>
