@@ -20,7 +20,7 @@ const useFetchFitnessPlan = () => {
 
     const prompt = `Create a personalized fitness and diet plan for a ${formData.age}-year-old with the goal of ${formData.fitnessGoal}. They weigh ${formData.weight}kg and are ${formData.height}cm tall. They plan to work out ${formData.timesPerWeek} times per week. Give only the training plan, no need for diet plan`;
 
-    const apiKey = import.meta.env.PUBLIC_RAPIDAPI_KEY;
+    const apiKey = import.meta.env.PUBLIC_GOOGLEAPI_KEY;
 
     try {
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {

@@ -1,54 +1,58 @@
-# Astro Starter Kit: Basics
+# Fitness Planner
 
-```sh
-npm create astro@latest -- --template basics
-```
+Fitness Planner is a personalized workout generator built with Astro, React, and TypeScript. It uses AI to create custom fitness plans based on user input.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Personalized fitness plan generation
+- User authentication with Clerk
+- Responsive design with Tailwind CSS
+- TypeScript for type safety
+- Server-side rendering with Astro
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Getting Started
 
-## 🚀 Project Structure
+### Prerequisites
 
-Inside of your Astro project, you'll see the following folders and files:
+- Node.js (v14 or later)
+- npm (v6 or later)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Installation
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. Clone the repository:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+   ```
+   git clone https://github.com/yourusername/fitness-planner.git
+   cd fitness-planner
+   ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. Install dependencies:
 
-## 🧞 Commands
+   ```
+   npm install
+   ```
 
-All commands are run from the root of the project, from a terminal:
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add the following:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```
+   PUBLIC_RAPIDAPI_KEY=your_api_key_here
+   PUBLIC_GOOGLEAPI_KEY=your_api_key_here
+   PUBLIC_CLERK_PUBLISHABLE_KEY=your_api_key_here
+   ```
 
-## 👀 Want to learn more?
+4. Start the development server:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:4321`
+
+## Technologies Used
+
+- [Astro](https://astro.build/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Clerk](https://clerk.dev/)
