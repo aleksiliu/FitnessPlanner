@@ -3,12 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import FitnessPlan from '../components/FitnessPlan.tsx';
 import { Image } from 'astro:assets';
 import backgroundImg from '../assets/background.jpg';
-import {
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/astro/components';
+import { SignInButton, SignedIn, SignedOut } from '@clerk/astro/components';
 ---
 
 <Layout title="Welcome to Fitness Planner">
@@ -37,9 +32,6 @@ import {
           </SignInButton>
         </div>
       </SignedOut>
-    </div>
-    <div class="absolute top-4 right-4 z-20">
-      <UserButton afterSignOutUrl="/" />
     </div>
   </div>
 </Layout>
