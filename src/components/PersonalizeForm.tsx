@@ -54,12 +54,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
               +
             </button>
           </div>
-          <button 
-            className="bg-white text-black w-full py-2 rounded-lg mt-4"
-            onClick={() => setSelectedField(null)}
-          >
-            Confirm
-          </button>
+
         </div>
       );
     }
@@ -93,12 +88,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
             </button>
           </div>
           <div className="text-gray-400 text-center mt-2">kg</div>
-          <button 
-            className="bg-white text-black w-full py-2 rounded-lg mt-4"
-            onClick={() => setSelectedField(null)}
-          >
-            Confirm
-          </button>
+
         </div>
       );
     }
@@ -132,12 +122,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
             </button>
           </div>
           <div className="text-gray-400 text-center mt-2">cm</div>
-          <button 
-            className="bg-white text-black w-full py-2 rounded-lg mt-4"
-            onClick={() => setSelectedField(null)}
-          >
-            Confirm
-          </button>
+
         </div>
       );
     }
@@ -157,12 +142,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
             <option value="Improve fitness">Improve fitness</option>
             <option value="Maintain health">Maintain health</option>
           </select>
-          <button 
-            className="bg-white text-black w-full py-2 rounded-lg mt-4"
-            onClick={() => setSelectedField(null)}
-          >
-            Confirm
-          </button>
+
         </div>
       );
     }
@@ -180,12 +160,6 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
             className="w-full"
           />
           <div className="text-white text-center mt-2">{formData.timesPerWeek}</div>
-          <button 
-            className="bg-white text-black w-full py-2 rounded-lg mt-4"
-            onClick={() => setSelectedField(null)}
-          >
-            Confirm
-          </button>
         </div>
       );
     }
@@ -237,12 +211,20 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
       {renderSelector()}
 
       {selectedField && (
+        <>
+                 <button 
+                 className="bg-white text-black w-full py-2 rounded-lg mt-4"
+                 onClick={() => setSelectedField(null)}
+               >
+                 Confirm
+               </button>
         <button 
-          className="mt-4 text-gray-400"
+          className="bg-gray-800 text-white w-full py-2 rounded-lg mt-4"
           onClick={() => setSelectedField(null)}
         >
           Cancel
         </button>
+        </>
       )}
     </div>
         <button
