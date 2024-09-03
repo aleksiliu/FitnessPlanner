@@ -23,17 +23,17 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
   const renderSelector = () => {
     if (selectedField === 'age') {
       return (
-        <div className="bg-white rounded-lg p-4 mt-6">
-          <h2 className="text-black text-lg mb-4 text-center">Age</h2>
+        <div className="bg-gray-800 rounded-lg p-4 mt-6">
+          <h2 className="text-white text-lg mb-4 text-center">Age</h2>
           <div className="flex items-center justify-center">
             <button 
-              className="text-white text-3xl px-4 rounded-full bg-black text-center"
+              className="text-white text-3xl px-4 rounded-full bg-gray-700 text-center"
               onClick={() => handleChange('age', Math.max(1, Number(formData.age) - 1))}
             >
               -
             </button>
             <div className="relative">
-              <span className="text-black text-5xl mx-4" onClick={() => handleFocus(ageInputRef)}>{formData.age}</span>
+              <span className="text-white text-5xl mx-4" onClick={() => handleFocus(ageInputRef)}>{formData.age}</span>
               <input
                 ref={ageInputRef}
                 type="number"
@@ -48,7 +48,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
               />
             </div>
             <button 
-              className="text-white text-3xl px-4 rounded-full bg-black text-center"
+              className="text-white text-3xl px-4 rounded-full bg-gray-700 text-center"
               onClick={() => handleChange('age', Number(formData.age) + 1)}
             >
               +
@@ -129,7 +129,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
   
     if (selectedField === 'fitnessGoal') {
       return (
-        <div className="bg-gray-800 rounded-lg p-4">
+        <div className="bg-gray-800 rounded-lg p-4 mt-6">
           <h2 className="text-white text-lg mb-4">Fitness Goal</h2>
           <select
             className="w-full bg-gray-700 text-white p-2 rounded-lg"
