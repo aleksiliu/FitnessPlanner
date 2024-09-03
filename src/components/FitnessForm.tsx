@@ -21,7 +21,7 @@ const FitnessForm: React.FC<FitnessFormProps> = ({ formData, handleChange, handl
     
     <button
       type="submit"
-      className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 text-lg font-semibold mt-6"
+      className="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-colors"
       disabled={loading}
     >
       {loading ? <LoadingSpinner /> : 'Get Your Fitness Plan'}
