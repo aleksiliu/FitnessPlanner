@@ -36,7 +36,6 @@ Fitness Planner is a personalized workout generator built with Astro, React, and
    Create a `.env` file in the root directory and add the following:
 
    ```
-   PUBLIC_RAPIDAPI_KEY=your_api_key_here
    PUBLIC_GOOGLEAPI_KEY=your_api_key_here
    PUBLIC_CLERK_PUBLISHABLE_KEY=your_api_key_here
    ```
