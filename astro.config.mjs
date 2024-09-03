@@ -9,4 +9,7 @@ export default defineConfig({
   integrations: [react(), tailwind(), clerk()],
   output: 'server',
   adapter: node({ mode: "standalone" }),
+  devToolbar: {
+    enabled: false
+  }
 });
