@@ -169,7 +169,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
 
   return (
     <>
-    <div className="text-white p-4 mb-6">
+    <div className="bg-text-white p-4 mb-6">
       <div className="space-y-4">
         <button 
           className="w-full flex justify-between items-center py-2 border-b border-gray-700"
