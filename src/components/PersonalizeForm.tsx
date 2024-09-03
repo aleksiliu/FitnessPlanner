@@ -23,11 +23,11 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
   const renderSelector = () => {
     if (selectedField === 'age') {
       return (
-        <div className="bg-gray-800 rounded-lg p-4 mt-6">
+        <div className="border border-neutral-500 rounded-lg p-4 mt-6">
           <h2 className="text-white text-lg mb-4 text-center">Age</h2>
           <div className="flex items-center justify-center">
             <button 
-              className="text-white text-3xl px-4 rounded-full bg-gray-700 text-center"
+              className="text-white text-3xl px-4 rounded-full border border-neutral-500 text-center"
               onClick={() => handleChange('age', Math.max(1, Number(formData.age) - 1))}
             >
               -
@@ -48,7 +48,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
               />
             </div>
             <button 
-              className="text-white text-3xl px-4 rounded-full bg-gray-700 text-center"
+              className="text-white text-3xl px-4 rounded-full border border-neutral-500 text-center"
               onClick={() => handleChange('age', Number(formData.age) + 1)}
             >
               +
@@ -129,10 +129,10 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
   
     if (selectedField === 'fitnessGoal') {
       return (
-        <div className="bg-gray-800 rounded-lg p-4 mt-6">
+        <div className="border border-neutral-500 rounded-lg p-4 mt-6">
           <h2 className="text-white text-lg mb-4">Fitness Goal</h2>
           <select
-            className="w-full bg-gray-700 text-white p-2 rounded-lg"
+            className="w-full bg-black border border-neutral-500 text-white p-4 rounded-lg"
             value={formData.fitnessGoal}
             onChange={(e) => handleChange('fitnessGoal', e.target.value)}
           >
