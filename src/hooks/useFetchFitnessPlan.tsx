@@ -11,7 +11,7 @@ interface ApiResponse {
 
 const useFetchFitnessPlan = () => {
   const [plan, setPlan] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   const fetchFitnessPlan = async (formData: UserProfile) => {
