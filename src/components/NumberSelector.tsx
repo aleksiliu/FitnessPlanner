@@ -45,8 +45,8 @@ const NumberSelector: React.FC<NumberSelectorProps> = ({ label, value, onChange,
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white rounded-2xl w-full max-w-md mx-4">
             <div className="flex justify-between p-4 border-b">
-              <button onClick={() => setIsOpen(false)} className="text-blue-500">Cancel</button>
-              <button onClick={() => setIsOpen(false)} className="text-blue-500 font-bold">Done</button>
+              <button onClick={() => setIsOpen(false)} className="text-black">Cancel</button>
+              <button onClick={() => setIsOpen(false)} className="text-black font-bold">Done</button>
             </div>
             <div className="h-48 overflow-scroll">
               {Array.from({ length: max - min + 1 }, (_, i) => min + i).map((num) => (
@@ -54,7 +54,7 @@ const NumberSelector: React.FC<NumberSelectorProps> = ({ label, value, onChange,
                   key={num}
                   ref={num === value ? selectedRef : null}
                   className={`p-4 text-center text-lg ${
-                    num === value ? 'bg-blue-100 text-blue-500 font-bold' : 'text-gray-700'
+                    num === value ? 'bg-blue-100 text-black font-bold' : 'text-gray-700'
                   }`}
                   onClick={() => handleSelect(num)}
                 >
