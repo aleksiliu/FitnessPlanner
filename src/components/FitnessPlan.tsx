@@ -30,8 +30,7 @@ const FitnessPlan: React.FC = () => {
       </>
       ) : (
         <div className="mt-4 rounded text-gray-100">
-          <PlanRenderer planText={displayedText} />
-          {isTyping && <span className="inline-block w-2 h-4 ml-1 bg-gray-100 animate-blink"></span>}
+          <PlanRenderer planText={displayedText} isTyping={isTyping} />
         </div>
       )}
       {error && <div className="mt-4 text-red-500">{error}</div>}

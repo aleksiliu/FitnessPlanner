@@ -2,9 +2,10 @@ import React from 'react';
 
 interface PlanRendererProps {
   planText: string;
+  isTyping: boolean;
 }
 
-const PlanRenderer: React.FC<PlanRendererProps> = ({ planText }) => {
+const PlanRenderer: React.FC<PlanRendererProps> = ({ planText, isTyping }) => {
   const renderPlan = (text: string) => {
     const sections = text.split('##').filter(section => section.trim() !== '');
     
@@ -26,6 +27,9 @@ const PlanRenderer: React.FC<PlanRendererProps> = ({ planText }) => {
                 return <p key={lineIndex} className="mt-2 text-gray-600">{line}</p>;
               }
             })}
+            {sectionIndex === sections.length - 1 && isTyping && (
+              <span className="inline-block w-2 h-4 ml-1 bg-gray-300 animate-blink"></span>
+            )}
           </div>
         </div>
       );
