@@ -11,7 +11,7 @@ const PlanRenderer: React.FC<PlanRendererProps> = ({ planText, isTyping }) => {
     
     return sections.map((section, sectionIndex) => {
       const lines = section.split('\n').filter(line => line.trim() !== '');
-      const title = lines.shift()?.trim();
+      const title = lines.shift()?.trim().replace(/^#\s*/, '');
       
       return (
         <div key={sectionIndex} className="mb-8">

@@ -175,7 +175,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
         <div className="flex justify-center mb-2 md:m-0">
         <button
           type="submit"
-          className="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-colors"
+          className="w-full bg-white text-black py-3 rounded-full hover:bg-gray-200 transition-colors"
           disabled={loading}
           onClick={handleSubmit}
         >
