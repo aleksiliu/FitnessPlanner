@@ -141,7 +141,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
           disabled={loading}
           onClick={handleSubmit}
         >
-          {loading ? <LoadingSpinner /> : 'Get Your Fitness Plan'}
+          {loading ? <LoadingSpinner text="Generating Plan..."/> : 'Get Your Fitness Plan'}
         </button>
       )}
     </>
