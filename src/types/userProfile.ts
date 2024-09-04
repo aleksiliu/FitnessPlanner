@@ -4,4 +4,5 @@ export interface UserProfile {
     height: number | string;
     fitnessGoal: string;
     timesPerWeek: number | string;
+    additionalNotes: string;
 }

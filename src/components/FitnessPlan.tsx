@@ -14,6 +14,7 @@ const FitnessPlan: React.FC = () => {
     height: 175,
     fitnessGoal: 'Select your goal',
     timesPerWeek: 3,
+    additionalNotes: '', 
   });
 
 

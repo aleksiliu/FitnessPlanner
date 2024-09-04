@@ -4,6 +4,7 @@ import type { UserProfile } from '../types/userProfile';
 import NumberSelector from './NumberSelector';
 import RangeSelector from './RangeSelector';
 import DropdownSelector from './DropdownSelector';
+import TextAreaInput from './TextAreaInput'; // You'll need to create this component
 
 interface PersonalizeFormProps {
   formData: UserProfile;
@@ -73,6 +74,15 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
             max={7}
           />
         );
+      case 'additionalNotes':
+        return (
+          <TextAreaInput
+            label="Additional Notes"
+            value={formData.additionalNotes}
+            onChange={(value: string) => handleChange('additionalNotes', value)}
+            placeholder="Any specific requirements or health conditions..."
+          />
+        );
       default:
         return null;
     }
@@ -82,7 +92,7 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
     <>
       <div className="text-white rounded-lg mb-6">
         <div className="space-y-0">
-          {['age', 'weight', 'height', 'fitnessGoal', 'timesPerWeek'].map((field) => (
+          {['age', 'weight', 'height', 'fitnessGoal', 'timesPerWeek', 'additionalNotes'].map((field) => (
             <button 
               key={field}
               className="w-full flex justify-between items-center py-4 border-b border-neutral-500"
