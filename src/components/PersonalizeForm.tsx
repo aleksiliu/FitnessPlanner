@@ -81,11 +81,11 @@ const PersonalizeForm: React.FC<PersonalizeFormProps> = ({ formData, handleChang
   return (
     <>
       <div className="text-white rounded-lg mb-6">
-        <div className="space-y-4">
+        <div className="space-y-0">
           {['age', 'weight', 'height', 'fitnessGoal', 'timesPerWeek'].map((field) => (
             <button 
               key={field}
-              className="w-full flex justify-between items-center py-2 border-b border-neutral-500"
+              className="w-full flex justify-between items-center py-4 border-b border-neutral-500"
               onClick={() => setSelectedField(field)}
             >
               <span className="capitalize">{field.replace(/([A-Z])/g, ' $1').trim()}</span>
