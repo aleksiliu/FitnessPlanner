@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import FitnessPlan from '../components/FitnessPlan.tsx';
+import FitnessPlanContainer from '../components/FitnessPlanContainer.tsx';
 import { Image } from 'astro:assets';
 import backgroundImg from '../assets/background.jpg';
 import { SignInButton, SignedIn, SignedOut } from '@clerk/astro/components';
@@ -20,7 +20,7 @@ import { SignInButton, SignedIn, SignedOut } from '@clerk/astro/components';
       class="relative w-full h-full max-w-xl p-4 sm:p-8 bg-black bg-opacity-85 backdrop-blur-sm rounded-lg shadow-lg"
     >
       <SignedIn>
-        <FitnessPlan client:load />
+        <FitnessPlanContainer client:load />
       </SignedIn>
       <SignedOut>
         <div class="text-white text-center">
