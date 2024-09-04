@@ -12,7 +12,7 @@ const FitnessPlan: React.FC = () => {
     age: 30,
     weight: 80,
     height: 175,
-    fitnessGoal: 'Select your goal',
+    fitnessGoal: 'Gain muscle',
     timesPerWeek: 3,
     additionalNotes: '', 
   });
