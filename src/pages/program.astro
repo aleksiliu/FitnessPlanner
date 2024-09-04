@@ -7,7 +7,9 @@ import { SignInButton, SignedIn, SignedOut } from '@clerk/astro/components';
 ---
 
 <Layout title="Welcome to Fitness Planner">
-  <div class="flex items-center justify-center min-h-screen p-4 sm:p-0">
+  <div
+    class="flex items-center justify-center md:min-h-screen min-h-[-webkit-fill-available] p-4 sm:p-0 my-16 md:mt-0"
+  >
     <Image
       src={backgroundImg}
       alt="Background"
