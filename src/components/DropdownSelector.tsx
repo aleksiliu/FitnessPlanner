@@ -21,7 +21,6 @@ const DropdownSelector: React.FC<DropdownSelectorProps> = ({ label, value, onCha
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >
-        <option value="">Select your {label.toLowerCase()}</option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
