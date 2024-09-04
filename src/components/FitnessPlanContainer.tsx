@@ -11,7 +11,7 @@ const FitnessPlan: React.FC = () => {
   const [formData, setFormData] = useState<UserProfile>({
     age: 30,
     weight: 80,
-    height: 175,
+    height: 187,
     fitnessGoal: 'Gain muscle',
     timesPerWeek: 3,
     additionalNotes: '', 
